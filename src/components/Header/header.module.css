@@ -1,0 +1,15 @@
+.header {
+  padding: var(--spacing-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  gap: var(--spacing-medium);
+}
+
+.navList a {
+  font-weight: bold;
+}

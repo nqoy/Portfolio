@@ -1,0 +1,16 @@
+:root {
+    /* Color Palette */
+  --primary-color: #679fae;
+  --secondary-color: #222;
+  --background-color: #f5f5f5;
+
+  /* Text Styling */
+  --text-color: #222;
+  --font-size-title: clamp(1.5rem, 2.5vw, 3rem);
+  --font-size-text: clamp(1rem, 1.5vw, 1.25rem);
+
+  /* Spacing */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+}
