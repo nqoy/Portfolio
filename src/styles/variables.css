@@ -1,5 +1,5 @@
 :root {
-    /* Color Palette */
+  /* Color Palette */
   --primary-color: #679fae;
   --secondary-color: #222;
   --background-color: #f5f5f5;
@@ -10,7 +10,7 @@
   --font-size-text: clamp(1rem, 1.5vw, 1.25rem);
 
   /* Spacing */
-  --spacing-small: clamp(0.5rem, 1.5vw, 1rem);
-  --spacing-medium: clamp(1rem, 2.5vw, 2rem);
-  --spacing-large: clamp(2rem, 4vw, 3rem);
+  --spacing-small: clamp(0.1rem, 0.5vw, 0.25rem);
+  --spacing-medium: clamp(0.5rem, 1vw, 1rem);
+  --spacing-large: clamp(1rem, 1.5vw, 2rem);
 }
