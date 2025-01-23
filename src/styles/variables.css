@@ -6,11 +6,13 @@
 
   /* Text Styling */
   --text-color: #222;
-  --font-size-title: clamp(1.5rem, 2.5vw, 3rem);
-  --font-size-text: clamp(1rem, 1.5vw, 1.25rem);
+  --text-font: Arial, sans-serif;
+  --font-size-large: clamp(1rem, 4vw, 4rem);
+  --font-size-medium: clamp(0.7rem, 2vw, 1.5rem);
+  --font-size-small: clamp(0.3rem, 1.5vw, 1rem);
 
   /* Spacing */
   --spacing-small: clamp(0.1rem, 0.5vw, 0.25rem);
   --spacing-medium: clamp(0.5rem, 1vw, 1rem);
-  --spacing-large: clamp(1rem, 1.5vw, 2rem);
+  --spacing-large: clamp(2rem, 5vw, 10rem);
 }

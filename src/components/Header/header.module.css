@@ -3,11 +3,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--primary-color);
 }
 
 .navList {
   display: flex;
-  gap: var(--spacing-medium);
+  gap: var(--spacing-large);
 }
 
 .navList a {

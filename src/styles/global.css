@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: var(--text-font);
   color: var(--text-color);
   background-color: var(--background-color);
 }
@@ -10,7 +10,7 @@ body {
 h1,
 h2,
 h3 {
-  font-size: var(--font-size-title);
+  font-size: var(--font-size-large);
   margin: var(--spacing-medium) 0;
 }
 
@@ -20,7 +20,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 .app-container {
@@ -32,7 +32,8 @@ body {
 }
 
 .app-container > main {
-  flex: 1; 
+  flex: 1;
+  justify-content: space-evenly;
 }
 
 p {
@@ -43,6 +44,7 @@ p {
 
 a {
   color: var(--text-color);
+  font-size: var(--font-size-medium);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -51,7 +53,16 @@ a:hover {
   color: var(--secondary-color);
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-large);
+}
+
+.profile-text {
+  font-size: var(--font-size-medium);
+}
+
 * {
   box-sizing: border-box;
-  background-color: var(--primary-color);
 }

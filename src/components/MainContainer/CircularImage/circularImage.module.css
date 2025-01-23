@@ -4,6 +4,6 @@
   border-radius: 50%;
   overflow: hidden;
   object-fit: cover;
-  margin: 0 auto;
   display: block;
+  margin-left: auto;
 }
