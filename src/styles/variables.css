@@ -10,7 +10,7 @@
   --font-size-text: clamp(1rem, 1.5vw, 1.25rem);
 
   /* Spacing */
-  --spacing-small: 0.5rem;
-  --spacing-medium: 1rem;
-  --spacing-large: 2rem;
+  --spacing-small: clamp(0.5rem, 1.5vw, 1rem);
+  --spacing-medium: clamp(1rem, 2.5vw, 2rem);
+  --spacing-large: clamp(2rem, 4vw, 3rem);
 }

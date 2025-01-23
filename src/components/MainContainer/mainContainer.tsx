@@ -10,7 +10,6 @@ export const MainContainer = ({ children }: MainContainerProps) => {
       <CircularImage
         src="https://avatars.githubusercontent.com/u/93088356?v=4"
         alt="Failed loading image"
-        size="500px"
       />
       {children}
     </main>
