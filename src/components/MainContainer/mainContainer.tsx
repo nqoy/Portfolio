@@ -8,7 +8,7 @@ export const MainContainer = ({ children }: MainContainerProps) => {
   return (
     <main className={styles.mainContainer}>
       <div className="profile">
-        <div className="profile-text">
+        <div className="profile-text fade-in">
           <span className="typing-effect">Computer Science & 3 years experiance in fullstack dev</span>
         </div>
 

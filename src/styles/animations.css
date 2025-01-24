@@ -1,7 +1,7 @@
 /* Fade-in Effect */
 .fade-in {
   opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -25,7 +25,7 @@
   --blinks: 4;
   animation: 
     typing var(--typing-duration) steps(30, end) 0.5s forwards,
-    blink 1s steps(1, end) 0s var( --blinks) forwards;
+    blink 1s steps(1, end) var( --blinks) forwards;
 }
 
 @keyframes typing {
