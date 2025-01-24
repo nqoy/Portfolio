@@ -1,12 +1,12 @@
 /* Fade-in Effect */
 .fade-in {
   opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
+    opacity: 0.1;
   }
   to {
     opacity: 1;
@@ -18,18 +18,23 @@
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  width: 0;
-  border-right: 2px solid whitesmoke;
-  animation: typing 3s steps(30, end) 0.5s forwards,
-    blink 1s steps(1, end) 0.5s 4 forwards;
+  width: max-content;
+  opacity: 0;
+  border-right: 2px solid whitsesmoke;
+  --typing-duration: 3s;
+  --blinks: 4;
+  animation: typing var(--typing-duration) steps(30, end) 0.5s forwards,
+    blink 1s steps(1, end) 0.5s var( --blinks) forwards;
 }
 
 @keyframes typing {
   from {
     width: 0;
+    opacity: 0
   }
   to {
     width: 100%;
+    opacity: 1
   }
 }
 
