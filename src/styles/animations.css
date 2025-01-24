@@ -20,17 +20,18 @@
   overflow: hidden;
   width: max-content;
   opacity: 0;
-  border-right: 2px solid whitsesmoke;
+  border-right: 2px solid whitesmoke;
   --typing-duration: 3s;
   --blinks: 4;
-  animation: typing var(--typing-duration) steps(30, end) 0.5s forwards,
-    blink 1s steps(1, end) 0.5s var( --blinks) forwards;
+  animation: 
+    typing var(--typing-duration) steps(30, end) 0.5s forwards,
+    blink 1s steps(1, end) 0s var( --blinks) forwards;
 }
 
 @keyframes typing {
   from {
+    opacity: 1;
     width: 0;
-    opacity: 0
   }
   to {
     width: 100%;
