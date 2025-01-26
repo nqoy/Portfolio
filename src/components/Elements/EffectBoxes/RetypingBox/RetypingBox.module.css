@@ -1,5 +1,6 @@
-.typingBox {
+.retypingBox {
     max-width: min-content;
     line-height: 1.5;
     min-width: 350px;
+    font-size: var(--font-size-medium);
   }

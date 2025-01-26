@@ -1,19 +1,17 @@
-
 /* Fade-in Effect */
 .fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* Typing Effect */
 .typing-effect {
@@ -22,11 +20,10 @@
   white-space: nowrap;
   width: 0;
   max-width: fit-content;
-  border-right: 2px solid var(--text-color);  
-  --typing-duration: 3s;
-  animation: 
-    typing var(--typing-duration) steps(30, end) var(--delay) forwards,
-    blink var(--typing-duration) steps(30, end) var(--delay) forwards;
+  border-right: 2px solid var(--text-color);
+  --typing-duration: 2s;
+  animation: typing var(--typing-duration) steps(30, end) var(--delay) forwards,
+    blink-cursor var(--typing-duration) steps(30, end) var(--delay) forwards;
 }
 
 @keyframes typing {
@@ -38,11 +35,30 @@
   }
 }
 
-@keyframes blink {
+@keyframes blink-cursor {
   from {
-    border-color: var(--text-color); /* Cursor visible */
+    border-color: var(--text-color);
   }
   to {
-    border-color: transparent; /* Cursor invisible */
+    border-color: transparent;
   }
+}
+
+/* Type-Delete Effect */
+.type-delete-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  max-width: fit-content;
+  border-right: 2px solid var(--text-color);
+  animation: 
+    typing-erase var(--switch-time) steps(20, end) infinite, 
+    blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes typing-erase {
+  0% { width: 0 }
+  50% { width: 100% }
+  100% { width: 0 }
 }

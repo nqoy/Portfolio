@@ -2,6 +2,7 @@ import styles from "./MainContainer.module.css";
 import { CircularImage } from "../Elements/CircularImage/circularImage";
 import { FadeInBox } from "../Elements/EffectBoxes/FadeInBox/FadeInBox";
 import { TypingBox } from "../Elements/EffectBoxes/TypingBox/TypingBox";
+import { RetypingBox } from "../Elements/EffectBoxes/RetypingBox/RetypingBox";
 
 type MainContainerProps = {
   children: React.ReactNode;
@@ -14,12 +15,20 @@ const profileText = [
   "Driven by curiosity and a passion for learning."
 ];
 
+const reapetLines = [
+  "Coding",
+  "Nature",
+  "Sports",
+  "Games"
+];
+
 export const MainContainer = ({ children }: MainContainerProps) => {
   return (
     <main className={styles.mainContainer}>
       <div className="profile">
         <FadeInBox>
           <TypingBox textLines={profileText} />
+          <RetypingBox reapetLines={reapetLines}/>
         </FadeInBox>
         <CircularImage
           src="https://avatars.githubusercontent.com/u/93088356?v=4"
