@@ -2,9 +2,10 @@ import styles from "./TypingBox.module.css";
 
 type TypingBoxProps = {
   textLines: string[];
+  typingDelaySeconds: number;
 };
 
-export const TypingBox = ({ textLines }: TypingBoxProps) => {
+export const TypingBox = ({ textLines, typingDelaySeconds }: TypingBoxProps) => {
   return (
     <div className={styles.typingBox}>
       {textLines.map((line, index) => (
@@ -13,7 +14,7 @@ export const TypingBox = ({ textLines }: TypingBoxProps) => {
           className="typing-effect"
           style={
             {
-              "--delay": `${index * 3}s`,
+              "--delay": `${index * typingDelaySeconds}s`,
             } as React.CSSProperties
           }
         >
