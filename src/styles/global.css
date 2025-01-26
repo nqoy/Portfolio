@@ -11,8 +11,8 @@ body {
 h1,
 h2,
 h3 {
-  font-size: var(--font-size-large);
-  margin: var(--spacing-medium) 0;
+  font-size: var(--font-size-l);
+  margin: var(--spacing-m) 0;
 }
 
 html,
@@ -38,14 +38,14 @@ body {
 }
 
 p {
-  margin-bottom: var(--spacing-medium);
+  margin-bottom: var(--spacing-m);
   font-size: var(--font-size-text);
-  line-height: 1.5;
+  line-height: var(--line-height);
 }
 
 a {
   color: var(--text-color);
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-m);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -57,13 +57,13 @@ a:hover {
 .profile {
   display: flex;
   align-items: center;
-  gap: var(--spacing-large);
+  gap: var(--spacing-xl);
 }
 
 .profile-text {
-  font-size: var(--font-size-medium);
-  line-height: 1.5;
-  margin: var(--spacing-small) 0;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height);
+  margin: var(--spacing-s) 0;
   transform: translateY(20px);
   max-width: max-content;
 }
@@ -73,9 +73,9 @@ a:hover {
   margin: 0 auto;
   padding: 1rem;
   font-size: 1rem;
-  line-height: 1.5;
-  white-space: normal; /* Allows text wrapping */
-  overflow-wrap: break-word; /* Breaks long words to fit within the width */
+  line-height: var(--line-height);
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 * {

@@ -1,16 +1,28 @@
 .header {
-  padding: var(--spacing-small);
+  padding: var(--spacing-s);
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.title {
+  font-size: var(--font-size-title);
 }
 
 .navList {
   display: flex;
-  gap: var(--spacing-large);
+  gap: var(--spacing-l);
 }
 
 .navList a {
   font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color var(--transition-duration);
+}
+
+.navList a:hover {
+  color: var(--accent-color);
 }

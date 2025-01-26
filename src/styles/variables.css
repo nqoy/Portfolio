@@ -3,16 +3,48 @@
   --primary-color: #679fae;
   --secondary-color: #222;
   --background-color: #f5f5f5;
+  --accent-color: #ff6347;
+  --border-color: #ddd;
+  --border-radius: 8px;
 
   /* Text Styling */
   --text-color: white;
   --text-font: Arial, sans-serif;
-  --font-size-large: clamp(1rem, 4vw, 4rem);
-  --font-size-medium: clamp(0.7rem, 2vw, 1.5rem);
-  --font-size-small: clamp(0.3rem, 1.5vw, 1rem);
+  --line-height: 1.5;
+  --font-size-title: clamp(1.5rem, 5vw, 3rem);
+  --font-size-l: clamp(1rem, 4vw, 4rem);
+  --font-size-m: clamp(0.7rem, 2vw, 1.5rem);
+  --font-size-s: clamp(0.3rem, 1.5vw, 1rem);
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
 
-  /* Spacing */
-  --spacing-small: clamp(0.1rem, 0.5vw, 0.25rem);
-  --spacing-medium: clamp(0.5rem, 1vw, 1rem);
-  --spacing-large: clamp(5rem, 5vw, 10rem);
+  --spacing-s: clamp(0.25rem, 0.5vw, 0.5rem);
+  --spacing-m: clamp(0.5rem, 1vw, 1.5rem);
+  --spacing-l: clamp(2rem, 2vw, 4rem);
+  --spacing-xl: clamp(4rem, 4vw, 6rem);
+
+  /* Sizes for Elements and Images */
+  --element-size-s: clamp(120px, 10vw, 180px);
+  --element-size-m: clamp(180px, 20vw, 300px);
+  --element-size-l: clamp(300px, 30vw, 500px);
+  --element-size-xl: clamp(500px, 40vw, 800px);
+
+  /* Shadows */
+  --shadow-light: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-m: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-dark: 0px 6px 18px rgba(0, 0, 0, 0.3);
+
+  /* Transition */
+  --transition-duration: clamp(0.2s, 0.3s, 0.5s);
+  --transition-ease: ease-in-out;
+  --transition: all var(--transition-duration) var(--transition-ease);
+
+  /* Z-Index */
+  --z-index-overlay: 9999;
+  --z-index-dropdown: 1000;
+  --z-index-default: 1;
+
+  /* Grid and Layout */
+  --max-width: clamp(960px, 80vw, 1200px);
+  --container-padding: clamp(1rem, 2vw, 3rem);
 }

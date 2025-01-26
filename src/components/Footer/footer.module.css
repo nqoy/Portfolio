@@ -1,6 +1,14 @@
 .footer {
-    color: white;
-    text-align: center;
-    margin-top: auto;
-    background-color: var(--primary-color);
-  }
+  color: var(--text-color);
+  text-align: center;
+  margin-top: auto;
+  background-color: var(--primary-color);
+  padding: var(--spacing-s) var(--spacing-m);
+  font-size: var(--font-size-s);
+}
+
+.footer p {
+  margin: 0;
+  line-height: var(--line-height);
+  font-size: var(--font-size-s);
+}

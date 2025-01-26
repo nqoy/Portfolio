@@ -1,6 +1,7 @@
 .retypingBox {
     max-width: min-content;
-    line-height: 1.5;
-    min-width: 350px;
-    font-size: var(--font-size-medium);
+    min-width: var(--element-size-s);
+    line-height: var(--line-height);
+    font-size: var(--font-size-m);
+    font-weight: bold;
   }

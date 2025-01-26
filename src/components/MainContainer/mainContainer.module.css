@@ -1,10 +1,10 @@
 .mainContainer {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-m);
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  color: white;
+  color: var(--text-color);
 }

@@ -1,9 +1,9 @@
 .circularImage {
-  width: clamp(100px, 70vw, 500px);
-  height: clamp(100px, 70vw, 500px);
+  width: var(--element-size-l);
+  height: var(--element-size-l);
   border-radius: 50%;
   overflow: hidden;
   object-fit: cover;
   display: block;
-  margin-left: auto;
+  margin: auto;
 }

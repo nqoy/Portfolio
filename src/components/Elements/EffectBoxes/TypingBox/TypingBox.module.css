@@ -1,5 +1,7 @@
 .typingBox {
     max-width: min-content;
-    line-height: 1.5;
-    min-width: 350px;
+    line-height: var(--line-height);
+    min-width: var(--element-size-s);
+    font-size: var(--font-size-m);
+    
   }
