@@ -2,13 +2,16 @@ import styles from "./MainContainer.module.css";
 import { CircularImage } from "../Elements/CircularImage/circularImage";
 import { FadeInBox } from "../Elements/EffectBoxes/FadeInBox/FadeInBox";
 import { TypingBox } from "../Elements/EffectBoxes/TypingBox/TypingBox";
+
 type MainContainerProps = {
   children: React.ReactNode;
 };
 
 const profileText = [
-  "Computer Science graduate with 3 years of experience in fullstack development.",
-  "Proficient in building scalable web applications and working with diverse teams."
+  "B.Sc. in Computer Science.",
+  "3 years of full-stack development experience.",
+  "Specialized in back-end development.",
+  "Driven by curiosity and a passion for learning."
 ];
 
 export const MainContainer = ({ children }: MainContainerProps) => {
