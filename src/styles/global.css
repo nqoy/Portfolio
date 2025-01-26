@@ -65,6 +65,17 @@ a:hover {
   line-height: 1.5;
   margin: var(--spacing-small) 0;
   transform: translateY(20px);
+  max-width: max-content;
+}
+
+.text-container {
+  max-width: clamp(300px, 50%, 800px); /* Responsive maximum width */
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: normal; /* Allows text wrapping */
+  overflow-wrap: break-word; /* Breaks long words to fit within the width */
 }
 
 * {

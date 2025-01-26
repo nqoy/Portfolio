@@ -1,52 +1,48 @@
+
 /* Fade-in Effect */
 .fade-in {
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
-}
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 /* Typing Effect */
 .typing-effect {
   display: inline-block;
-  white-space: nowrap;
   overflow: hidden;
-  width: max-content;
-  opacity: 0;
-  border-right: 2px solid whitesmoke;
+  white-space: nowrap;
+  width: 0;
+  max-width: fit-content;
+  border-right: 2px solid var(--text-color);  
   --typing-duration: 3s;
-  --blinks: 4;
   animation: 
-    typing var(--typing-duration) steps(30, end) 0.5s forwards,
-    blink 1s steps(1, end) var( --blinks) forwards;
+    typing var(--typing-duration) steps(30, end) var(--delay) forwards,
+    blink var(--typing-duration) steps(30, end) var(--delay) forwards;
 }
 
 @keyframes typing {
   from {
-    opacity: 1;
     width: 0;
   }
   to {
     width: 100%;
-    opacity: 1
   }
 }
 
 @keyframes blink {
-  0% {
-    border-color: transparent;
+  from {
+    border-color: var(--text-color); /* Cursor visible */
   }
-  50% {
-    border-color: whitesmoke;
-  }
-  100% {
-    border-color: transparent;
+  to {
+    border-color: transparent; /* Cursor invisible */
   }
 }
