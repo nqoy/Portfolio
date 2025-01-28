@@ -22,8 +22,8 @@
   max-width: fit-content;
   border-right: 2px solid var(--text-color);
   --typing-duration: 2s;
-  animation: typing var(--typing-duration) steps(30, end) var(--delay) forwards,
-    blink-cursor var(--typing-duration) steps(30, end) var(--delay) forwards;
+  animation: typing var(--typing-duration) steps(80, end) var(--delay) forwards,
+    blink-cursor var(--typing-duration) steps(80, end) var(--delay) forwards;
 }
 
 @keyframes typing {
@@ -56,7 +56,7 @@
   max-width: fit-content;
   border-right: 2px solid var(--text-color);
   animation: 
-    typing-erase var(--switch-time) steps(20, end) infinite, 
+    typing-erase var(--switch-time) steps(50, end) infinite, 
     blink-cursor 0.75s step-end infinite;
 }
 

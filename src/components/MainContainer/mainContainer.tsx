@@ -8,7 +8,7 @@ type MainContainerProps = {
 export const MainContainer = ({ children }: MainContainerProps) => {
   return (
     <main className={styles.mainContainer}>
-      <Profile />
+      <Profile/>
       {children}
     </main>
   );

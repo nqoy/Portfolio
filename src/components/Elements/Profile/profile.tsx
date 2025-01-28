@@ -12,7 +12,16 @@ const profileText = [
   "Specialized in back-end development. 🔧",
   "B.Sc. in Computer Science. 🎓",
 ];
-const repeatLines = ["Coding 💻", "Nature 🌿", "Sports 🏅", "Games 🎮"];
+const repeatLines = [
+    "Teamwork Skills 🤝", 
+    "Problem-Solving 🧩", 
+    "System Design 📐", 
+    "Architecture 🕸️",
+    "Integrations 🔗",
+    "Fast Learning 📚",  
+    "Infrastructure ☁️",
+    "Troubleshooting 🐛",
+  ];
 const typingDelaySeconds = 3;
 const profileImageURL = "https://avatars.githubusercontent.com/u/93088356?v=4";
 
