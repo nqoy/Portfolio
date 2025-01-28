@@ -54,22 +54,8 @@ a:hover {
   color: var(--secondary-color);
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xl);
-}
-
-.profile-text {
-  font-size: var(--font-size-m);
-  line-height: var(--line-height);
-  margin: var(--spacing-s) 0;
-  transform: translateY(20px);
-  max-width: max-content;
-}
-
 .text-container {
-  max-width: clamp(300px, 50%, 800px); /* Responsive maximum width */
+  max-width: clamp(300px, 50%, 800px);
   margin: 0 auto;
   padding: 1rem;
   font-size: 1rem;

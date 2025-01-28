@@ -3,5 +3,5 @@ type FadeInBoxProps = {
 };
 
 export const FadeInBox = ({ children }: FadeInBoxProps) => {
-  return <div className={`fade-in`}>{children}</div>;
+  return <div className="fade-in">{children}</div>;
 };

@@ -12,12 +12,12 @@ export const RetypingBox = ({ repeatLines }: RetypingBoxProps) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentLineIndex((prevIndex) =>
-        prevIndex + 1 < repeatLines.length ? prevIndex + 1 : 0
+      setCurrentLineIndex((prevLineIndex) =>
+        prevLineIndex + 1 < repeatLines.length ? prevLineIndex + 1 : 0
       );
-    }, SWITCH_STRING_TIME); // Use the constant switchTime for the interval
+    }, SWITCH_STRING_TIME);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
+    return () => clearInterval(interval);
   }, [repeatLines.length]);
 
   return (
