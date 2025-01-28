@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./RetypingBox.module.css";
 
-const BASE_SWITCH_TIME = 260;
+const BASE_SWITCH_TIME = 300;
 
 type RetypingBoxProps = {
   repeatLines: string[];
