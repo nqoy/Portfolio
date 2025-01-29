@@ -1,20 +1,20 @@
 export enum GitHubQueryField {
+  URL = "url",
   NAME = "name",
-  DESCRIPTION = "description",
-  STARGAZERS_COUNT = "stargazersCount",
-  FORKS_COUNT = "forksCount",
-  LANGUAGE = "primaryLanguage",
   CREATED_AT = "createdAt",
   UPDATED_AT = "updatedAt",
-  OWNER = "owner { login }",
   IS_PRIVATE = "isPrivate",
-  LICENSE = "license { name }",
+  OWNER = "owner { login }",
   PARENT = "parent { name }",
-  URL = "url",
   OPEN_ISSUES = "openIssues",
+  FORKS_COUNT = "forksCount",
+  DESCRIPTION = "description",
+  LICENSE = "license { name }",
+  LANGUAGE = "primaryLanguage",
+  STARGAZERS_COUNT = "stargazersCount",
 }
 
 export enum SortOrder {
-    ASC = "ASC",
-    DESC = "DESC",
-  }
+  ASC = "ASC",
+  DESC = "DESC",
+}

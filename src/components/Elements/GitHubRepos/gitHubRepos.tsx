@@ -41,19 +41,20 @@ export const GitHubRepos: React.FC = () => {
 
   return (
     <div>
-      <h2>Your Repositories</h2>
+      <h2>My Projects</h2>
       {repos.length === 0 ? (
         <p>No repositories found.</p>
       ) : (
         <ul>
-          {repos.map((repo) => (
-            <li key={repo.node.name}>
-              <strong>{repo.node.name}</strong>
-              {repo.node.primaryLanguage && (
-                <span> - Language: {repo.node.primaryLanguage.name}</span>
-              )}
-            </li>
-          ))}
+          {repos.map(
+            (repo) =>
+              repo.node.primaryLanguage?.name && (
+                <li key={repo.node.name}>
+                  <strong>{repo.node.name}</strong>
+                  <span> - Language: {repo.node.primaryLanguage.name}</span>
+                </li>
+              )
+          )}
         </ul>
       )}
     </div>

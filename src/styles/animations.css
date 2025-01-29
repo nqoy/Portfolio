@@ -15,10 +15,10 @@
 
 /* Typing Effect */
 .typing-effect {
-  display: inline-block;
+  width: 0;
   overflow: hidden;
   white-space: nowrap;
-  width: 0;
+  display: inline-block;
   max-width: fit-content;
   border-right: 2px solid var(--text-color);
   --typing-duration: 2s;
@@ -55,13 +55,18 @@
   width: 0;
   max-width: fit-content;
   border-right: 2px solid var(--text-color);
-  animation: 
-    typing-erase var(--switch-time) steps(50, end) infinite, 
+  animation: typing-erase var(--switch-time) steps(50, end) infinite,
     blink-cursor 0.75s step-end infinite;
 }
 
 @keyframes typing-erase {
-  0% { width: 0 }
-  50% { width: 100% }
-  100% { width: 0 }
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
 }

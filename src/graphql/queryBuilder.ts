@@ -2,19 +2,19 @@ import { GitHubQuery } from "./gitHubQuery";
 import { GitHubQueryField } from './queryEnums';
 
 const fieldMappings = {
+  [GitHubQueryField.URL]: "url",
   [GitHubQueryField.NAME]: "name",
   [GitHubQueryField.DESCRIPTION]: "description",
-  [GitHubQueryField.STARGAZERS_COUNT]: "stargazersCount",
   [GitHubQueryField.FORKS_COUNT]: "forksCount",
-  [GitHubQueryField.LANGUAGE]: "primaryLanguage { name }",
   [GitHubQueryField.CREATED_AT]: "createdAt",
   [GitHubQueryField.UPDATED_AT]: "updatedAt",
   [GitHubQueryField.OWNER]: "owner { login }",
   [GitHubQueryField.IS_PRIVATE]: "isPrivate",
   [GitHubQueryField.LICENSE]: "license { name }",
   [GitHubQueryField.PARENT]: "parent { name }",
-  [GitHubQueryField.URL]: "url",
   [GitHubQueryField.OPEN_ISSUES]: "openIssues",
+  [GitHubQueryField.STARGAZERS_COUNT]: "stargazersCount",
+  [GitHubQueryField.LANGUAGE]: "primaryLanguage { name }",
 };
 
 export class QueryBuilder {
@@ -25,7 +25,7 @@ export class QueryBuilder {
       .filter(Boolean)
       .join("\n");
 
-    const orderByField = gitHubQuery.getOrderByKeyValue();
+    const orderByField = gitHubQuery.getOrderByKey();
     const orderByArgument = orderByField
       ? `, orderBy: { field: ${orderByField}, direction: ${gitHubQuery.getSortOrder()} }`
       : '';

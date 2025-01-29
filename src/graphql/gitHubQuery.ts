@@ -23,7 +23,7 @@ export class GitHubQuery {
     return this.sortOrder;
   }
 
-  getOrderByKeyValue(): string | null {
+  getOrderByKey(): string | null {
     const entry = Object.entries(GitHubQueryField).find(([, val]) => val === this.orderByField);
     return entry ? entry[0] : null;
   }
