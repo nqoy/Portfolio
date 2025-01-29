@@ -1,20 +1,30 @@
-import { GitHubQueryFields, SortOrder } from './queryEnums';
+import { GitHubQueryField, SortOrder } from "./queryEnums";
 
 export class GitHubQuery {
-  private fields: GitHubQueryFields[];
+  private fields: GitHubQueryField[];
   private sortOrder: SortOrder;
+  private orderByField: GitHubQueryField | null = null;
 
-  constructor(fields: GitHubQueryFields[], sortOrder: SortOrder = SortOrder.DESC) {
+  constructor(
+    fields: GitHubQueryField[],
+    sortOrder: SortOrder = SortOrder.DESC,
+    orderByField: GitHubQueryField
+  ) {
     this.fields = fields;
     this.sortOrder = sortOrder;
+    this.orderByField = orderByField;
   }
 
-  // Getter methods for fields and sortOrder
-  getFields(): GitHubQueryFields[] {
+  getFields(): GitHubQueryField[] {
     return this.fields;
   }
 
   getSortOrder(): SortOrder {
     return this.sortOrder;
+  }
+
+  getOrderByKeyValue(): string | null {
+    const entry = Object.entries(GitHubQueryField).find(([, val]) => val === this.orderByField);
+    return entry ? entry[0] : null;
   }
 }

@@ -1,4 +1,4 @@
-export enum GitHubQueryFields {
+export enum GitHubQueryField {
   NAME = "name",
   DESCRIPTION = "description",
   STARGAZERS_COUNT = "stargazersCount",

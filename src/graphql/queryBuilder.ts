@@ -1,19 +1,41 @@
+import { GitHubQuery } from "./gitHubQuery";
+import { GitHubQueryField } from './queryEnums';
 
-import { GitHubQuery } from './githubQuery';
+const fieldMappings = {
+  [GitHubQueryField.NAME]: "name",
+  [GitHubQueryField.DESCRIPTION]: "description",
+  [GitHubQueryField.STARGAZERS_COUNT]: "stargazersCount",
+  [GitHubQueryField.FORKS_COUNT]: "forksCount",
+  [GitHubQueryField.LANGUAGE]: "primaryLanguage { name }",
+  [GitHubQueryField.CREATED_AT]: "createdAt",
+  [GitHubQueryField.UPDATED_AT]: "updatedAt",
+  [GitHubQueryField.OWNER]: "owner { login }",
+  [GitHubQueryField.IS_PRIVATE]: "isPrivate",
+  [GitHubQueryField.LICENSE]: "license { name }",
+  [GitHubQueryField.PARENT]: "parent { name }",
+  [GitHubQueryField.URL]: "url",
+  [GitHubQueryField.OPEN_ISSUES]: "openIssues",
+};
 
 export class QueryBuilder {
   static buildQuery(gitHubQuery: GitHubQuery): string {
     const fields = gitHubQuery.getFields();
-    const sortOrder = gitHubQuery.getSortOrder();
+    const selectedFields = fields
+      .map((field) => fieldMappings[field])
+      .filter(Boolean)
+      .join("\n");
 
-    // Construct the query based on the data
+    const orderByField = gitHubQuery.getOrderByKeyValue();
+    const orderByArgument = orderByField
+      ? `, orderBy: { field: ${orderByField}, direction: ${gitHubQuery.getSortOrder()} }`
+      : '';
     return `
       query {
         viewer {
-          repositories(first: 10, orderBy: {field: STARGAZERS, direction: ${sortOrder}}) {
+          repositories(first: 100 ${orderByArgument}) {
             edges {
               node {
-                ${fields.map((field) => field).join("\n")}
+                ${selectedFields}
               }
             }
           }
