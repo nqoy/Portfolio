@@ -6,12 +6,13 @@ export enum GitHubQueryField {
   IS_PRIVATE = "isPrivate",
   OWNER = "owner { login }",
   PARENT = "parent { name }",
-  OPEN_ISSUES = "openIssues",
-  FORKS_COUNT = "forksCount",
+  OPEN_ISSUES = "issues { totalCount }",
+  FORKS_COUNT = "forkCount",
   DESCRIPTION = "description",
-  LICENSE = "license { name }",
-  LANGUAGE = "primaryLanguage",
-  STARGAZERS_COUNT = "stargazersCount",
+  LICENSE = "licenseInfo { name }",
+  LANGUAGE = "primaryLanguage { name }",
+  STARGAZERS_COUNT = "stargazerCount",
+  LANGUAGES = "languages"
 }
 
 export enum SortOrder {

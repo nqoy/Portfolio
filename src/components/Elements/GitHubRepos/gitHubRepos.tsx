@@ -12,7 +12,7 @@ export const GitHubRepos: React.FC = () => {
     if (repos.length > 0) return;
 
     const reposQuery = new GitHubQuery(
-      [GitHubQueryField.NAME, GitHubQueryField.LANGUAGE],
+      [GitHubQueryField.NAME, GitHubQueryField.LANGUAGES],
       SortOrder.ASC,
       GitHubQueryField.CREATED_AT
     );
