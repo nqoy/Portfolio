@@ -3,7 +3,7 @@ import { Profile } from "../Elements/Profile/profile";
 import  {GitHubRepos}  from "../Elements/GitHubRepos/gitHubRepos";
 
 type MainContainerProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const MainContainer = ({ children }: MainContainerProps) => {

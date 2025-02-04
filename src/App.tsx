@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="app-container">
       <Header title="My Portfolio" />
-      <MainContainer>These are children</MainContainer>
+      <MainContainer/>
       <Footer />
     </div>
   );

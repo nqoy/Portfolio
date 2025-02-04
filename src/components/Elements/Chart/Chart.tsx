@@ -27,14 +27,13 @@ ChartJS.register(
   LineElement
 );
 
-
 const chartStyles = {
   backgroundColor: [
-    "rgb(246, 109, 68)",
+    "rgb(246, 86, 68)",
     "rgb(254, 174, 101)",
     "rgb(230, 246, 157)",
     "rgb(170, 222, 167)",
-    "rgb(60, 172, 226)",
+    "rgb(84, 178, 225)",
     "rgb(220, 83, 226)",
     "rgb(138, 86, 226)",
     "rgb(100, 194, 166)",
@@ -60,7 +59,7 @@ const defaultOptions: ChartOptions<ChartType> = {
   },
   plugins: {
     legend: {
-      position: "top",
+      align:"start",
     },
     tooltip: {
       callbacks: {
