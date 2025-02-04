@@ -17,7 +17,7 @@ const fieldMappings = {
   [GitHubQueryField.LANGUAGE]: { primaryLanguage: ["name"] },
   [GitHubQueryField.LANGUAGES]: {
     languages: {
-      first: 100,
+      first: 10,
       data: {
         edges: {
           size: null,
@@ -27,13 +27,15 @@ const fieldMappings = {
     },
   },
 };
+const nestParams = { node: true, edges: true };
+const amountParams = { first: true, last: true };
 
 export class QueryBuilder {
   static buildQuery(gitHubQuery: GitHubQuery): string {
-    const fields = gitHubQuery
+    const structuredFields = gitHubQuery
       .getFields()
       .map((field) => this.formatField(fieldMappings[field]))
-      .join("\n");
+      .join(",\n");
     const orderByField = gitHubQuery.getOrderByKey();
     const orderByArgument = orderByField
       ? `, orderBy: { field: ${orderByField}, direction: ${gitHubQuery.getSortOrder()} }`
@@ -44,7 +46,7 @@ export class QueryBuilder {
         repositories(first: 100${orderByArgument}) {
           edges {
             node {
-              ${fields}
+              ${structuredFields}
             }
           }
         }
@@ -53,41 +55,47 @@ export class QueryBuilder {
   }
 
   private static formatField(field: string | object): string {
-    if (typeof field === "string") {
-      return field;
-    }
-    if (Array.isArray(field)) {
-      return field.join(" ");
-    }
-    if (field && typeof field === "object") {
-      const nestParamStrings = ["node", "edges"];
-      const amountParamStrings = ["first", "last"];
+    if (typeof field === "string") return field;
+    if (Array.isArray(field)) return field.join(" ");
+    if (!field || typeof field !== "object") return "";
 
-      return Object.entries(field)
-        .map(([key, value]) => {
-          if (amountParamStrings.includes(key)) {
-            return `(${key}: ${value})`;
-          }
-          if (key === "data") {
-            return `{\n${this.formatField(value)}\n}`;
-          }
-          if (value && typeof value === "object") {
-            if (nestParamStrings.includes(key)) {
-              return `${key} {\n${this.formatField(value)}\n}`;
-            }
-            const isWithAmountParams = Object.keys(value).some((nestedKey) =>
-              amountParamStrings.includes(nestedKey)
-            );
-            if (isWithAmountParams) {
-              return `${key}${this.formatField(value)}`;
-            }
-            return `${key} { ${this.formatField(value)} }`;
-          }
-          return `${key} ${value ? `{ ${this.formatField(value)} }` : ""}`;
-        })
-        .join(" ");
-    }
+    return Object.entries(field)
+      .map(([currentField, fieldValue], index, array) => {
+        let result = "";
 
-    return "";
+        switch (true) {
+          case currentField in amountParams:
+            result = `(${currentField}: ${fieldValue})`;
+            break;
+
+          case currentField === "data":
+            result = `{\n${this.formatField(fieldValue)}\n}`;
+            break;
+
+          case fieldValue && typeof fieldValue === "object": {
+            if (currentField in nestParams) {
+              result = `${currentField} {\n${this.formatField(fieldValue)}\n}`;
+            } else {
+              const isWithAmountParams = Object.keys(fieldValue).some(
+                (nestedKey) => nestedKey in amountParams
+              );
+              result = isWithAmountParams
+                ? `${currentField}${this.formatField(fieldValue)}`
+                : `${currentField} { ${this.formatField(fieldValue)} }`;
+            }
+            break;
+          }
+
+          default:
+            result = `${currentField} ${
+              fieldValue ? `{ ${this.formatField(fieldValue)} }` : ""
+            }`;
+            break;
+        }
+        const isLastField = index === array.length - 1;
+
+        return `${result}${isLastField ? "" : ","}`;
+      })
+      .join(" ");
   }
 }
