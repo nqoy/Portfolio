@@ -1,5 +1,7 @@
 import React from "react";
 import { Pie, Bar, Line, Doughnut } from "react-chartjs-2";
+import styles from "./Chart.module.css";
+
 import {
   Chart as ChartJS,
   ArcElement,
@@ -25,15 +27,6 @@ ChartJS.register(
   LineElement
 );
 
-type ChartType = "pie" | "bar" | "line" | "doughnut";
-
-type ChartProps = {
-  title?: string;
-  labels: string[];
-  chartType: ChartType;
-  labelValues: number[];
-  options?: ChartOptions<ChartType>;
-};
 
 const chartStyles = {
   backgroundColor: [
@@ -60,13 +53,6 @@ const chartStyles = {
   borderWidth: 3,
 };
 
-const chartTypes: Record<ChartType, React.ElementType> = {
-  pie: Pie,
-  bar: Bar,
-  line: Line,
-  doughnut: Doughnut,
-};
-
 const defaultOptions: ChartOptions<ChartType> = {
   responsive: true,
   animation: {
@@ -85,6 +71,23 @@ const defaultOptions: ChartOptions<ChartType> = {
       },
     },
   },
+};
+
+type ChartType = "pie" | "bar" | "line" | "doughnut";
+
+type ChartProps = {
+  title?: string;
+  labels: string[];
+  chartType: ChartType;
+  labelValues: number[];
+  options?: ChartOptions<ChartType>;
+};
+
+const chartTypes: Record<ChartType, React.ElementType> = {
+  pie: Pie,
+  bar: Bar,
+  line: Line,
+  doughnut: Doughnut,
 };
 
 export const Chart = ({
@@ -109,7 +112,7 @@ export const Chart = ({
   };
 
   return (
-    <div>
+    <div className={styles.ChartContainer}>
       <h3>{title}</h3>
       <ChartComponent data={data} options={options || defaultOptions} />
     </div>
