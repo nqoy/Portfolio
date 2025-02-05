@@ -1,6 +1,5 @@
-.profile {
+.gitHubData {
   display: flex;
   align-items: center;
   gap: var(--spacing-xxl);
-  padding: var(--spacing-xxl);
 }

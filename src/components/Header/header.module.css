@@ -1,10 +1,10 @@
 .header {
-  padding: var(--spacing-s);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: var(--primary-color);
   color: var(--text-color);
+  padding: var(--spacing-s) var(--spacing-m);
+  justify-content: space-between;
+  background-color: var(--primary-color);
 }
 
 .title {
@@ -25,4 +25,11 @@
 
 .navList a:hover {
   color: var(--accent-color);
+}
+
+.navList a.activeNav {
+  font-weight: bold;
+  outline-offset: 4px;
+  text-underline-offset: 4px;
+  text-decoration: underline dashed var(--accent-color);
 }

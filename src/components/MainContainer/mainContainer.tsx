@@ -1,6 +1,6 @@
 import styles from "./MainContainer.module.css";
 import { Profile } from "../Elements/Profile/profile";
-import  {GitHubRepos}  from "../Elements/GitHubRepos/gitHubRepos";
+import { GitHubData } from "../Elements/GitHubData/gitHubData";
 
 type MainContainerProps = {
   children?: React.ReactNode;
@@ -9,8 +9,8 @@ type MainContainerProps = {
 export const MainContainer = ({ children }: MainContainerProps) => {
   return (
     <main className={styles.mainContainer}>
-      <Profile/>
-      <GitHubRepos/>
+        <Profile />
+        <GitHubData />
       {children}
     </main>
   );

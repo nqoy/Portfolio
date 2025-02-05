@@ -39,7 +39,7 @@ export const Profile = () => {
   }, [profileText.length]);
 
   return (
-    <div className={styles.profile}>
+    <div className={styles.profile} id="about">
       <CenterWrapper>
         <FadeInBox>
           <TypingBox

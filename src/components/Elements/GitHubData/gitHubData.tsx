@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { GitHubQueryField, SortOrder } from "../../../graphql/queryEnums";
 import { GitHubQuery } from "../../../classes/gitHubQuery";
 import { fetchGitHubData } from "../../../services/graphqlApi";
 import { RepoData, RepoLanguages } from "../../../classes/repoData";
-import { Chart } from "../Chart/Chart"; // Adjust import path
+import { Chart } from "../Chart/Chart";
+import styles from "./gitHubData.module.css";
 
-export const GitHubRepos: React.FC = () => {
+export const GitHubData = () => {
   const [reposData, setReposData] = useState<{ [key: string]: RepoData }>({});
   const [languagesMap, setLanguagesMap] = useState<Map<string, number>>(
     new Map()
@@ -88,7 +89,7 @@ export const GitHubRepos: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className={styles.gitHubData} id="projects">
       <Chart
         title="Used Languages"
         chartType="doughnut"
@@ -102,13 +103,6 @@ export const GitHubRepos: React.FC = () => {
           return (
             <li key={repoName}>
               <strong>{repo.repoName}</strong>
-              <ul>
-                {repo.languages.map((language, index) => (
-                  <li key={index}>
-                    {language.languageName} - Size: {language.size}
-                  </li>
-                ))}
-              </ul>
             </li>
           )
         })}
@@ -116,5 +110,3 @@ export const GitHubRepos: React.FC = () => {
     </div>
   );
 };
-
-export default GitHubRepos;

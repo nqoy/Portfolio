@@ -15,19 +15,22 @@
   --font-size-l: clamp(1rem, 4vw, 4rem);
   --font-size-m: clamp(0.7rem, 2vw, 1.5rem);
   --font-size-s: clamp(0.3rem, 1.5vw, 1rem);
+  --font-size-xs: clamp(0.2rem, 1vw, 0.7rem);
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
   --spacing-s: clamp(0.25rem, 0.5vw, 0.5rem);
   --spacing-m: clamp(0.5rem, 1vw, 1.5rem);
   --spacing-l: clamp(2rem, 2vw, 4rem);
-  --spacing-xl: clamp(4rem, 4vw, 6rem);
+  --spacing-xl: clamp(3rem, 4vw, 6rem);
+  --spacing-xxl: clamp(3rem, 5vw, 8rem);
 
   /* Sizes for Elements and Images */
   --element-size-s: clamp(120px, 10vw, 180px);
   --element-size-m: clamp(180px, 20vw, 300px);
   --element-size-l: clamp(300px, 30vw, 500px);
-  --element-size-xl: clamp(400px, 40vw, 600px);
+  --element-size-xl: clamp(320px, 40vw, 600px);
+  --element-size-xxl: clamp(500px, 45vw, 700px);
 
   /* Shadows */
   --shadow-light: 0px 2px 6px rgba(0, 0, 0, 0.1);
