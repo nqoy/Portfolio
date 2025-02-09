@@ -1,4 +1,4 @@
-import styles from "./CircularImage.module.css";
+import styles from "./circularImage.module.css";
 
 type CircularImageProps = {
   src: string;

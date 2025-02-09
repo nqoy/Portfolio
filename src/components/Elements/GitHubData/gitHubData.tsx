@@ -3,10 +3,10 @@ import { GitHubQueryField, SortOrder } from "../../../graphql/queryEnums";
 import { GitHubQuery } from "../../../classes/gitHubQuery";
 import { fetchGitHubData } from "../../../services/graphqlApi";
 import { RepoData, RepoLanguages } from "../../../classes/repoData";
-import { Chart } from "../Chart/Chart";
+import { Chart } from "../Chart/chart";
 import styles from "./gitHubData.module.css";
-import ImageCarousel from "../ImageSlider/ImageSlider";
-import { FadeInBox } from "../EffectBoxes/FadeInBox/FadeInBox";
+import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox";
+import ImageSlider from "../ImageSlider/imageSlider";
 
 export const GitHubData = () => {
   const [reposData, setReposData] = useState<{ [key: string]: RepoData }>({});
@@ -116,7 +116,7 @@ export const GitHubData = () => {
           </div>
         </ul>
       </div>
-      <ImageCarousel totalImages={7} />
+      <ImageSlider totalImages={7} />
     </FadeInBox>
   );
 };

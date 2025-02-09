@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import styles from "./ImageSlider.module.css";
+import styles from "./imageSlider.module.css";
 
 type ImageSliderProps = {
   totalImages: number;

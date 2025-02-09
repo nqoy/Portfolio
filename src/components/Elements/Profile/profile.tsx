@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react";
-import { CenterWrapper } from "../CenterWrapper/CenterWrapper";
-import { FadeInBox } from "../EffectBoxes/FadeInBox/FadeInBox";
-import { TypingBox } from "../EffectBoxes/TypingBox/TypingBox";
-import { RetypingBox } from "../EffectBoxes/RetypingBox/RetypingBox";
+import { CenterWrapper } from "../CenterWrapper/centerWrapper";
+import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox";
+import { TypingBox } from "../EffectBoxes/TypingBox/typingBox";
+import { RetypingBox } from "../EffectBoxes/RetypingBox/retypingBox";
 import { CircularImage } from "../CircularImage/circularImage";
 import styles from "./profile.module.css";
 
 const profileText = [
-  "3 years of full-stack development experience. 💻",
   "Driven by curiosity and a passion for learning. 💡",
+  "3 years of full-stack development experience. 💻",
   "Specialized in back-end development. 🔧",
   "B.Sc. in Computer Science. 🎓",
 ];
 const repeatLines = [
-    "Teamwork Skills 🤝", 
-    "Problem-Solving 🧩", 
-    "System Design 📐", 
-    "Architecture 🕸️",
-    "Integrations 🔗",
-    "Fast Learning 📚",  
-    "Infrastructure ☁️",
-    "Troubleshooting 🐛",
-  ];
+  "Teamwork Skills 🤝",
+  "Problem-Solving 🧩",
+  "System Design 📐",
+  "Architecture 🕸️",
+  "Integrations 🔗",
+  "Fast Learning 📚",
+  "Infrastructure ☁️",
+  "Troubleshooting 🐛",
+];
 const typingDelaySeconds = 3;
 const profileImageURL = "https://avatars.githubusercontent.com/u/93088356?v=4";
 

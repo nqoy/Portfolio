@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./RetypingBox.module.css";
+import styles from "./retypingBox.module.css";
 
 const BASE_SWITCH_TIME = 300;
 

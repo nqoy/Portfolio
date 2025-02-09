@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./CenterWrapper.module.css";
+import styles from "./centerWrapper.module.css";
 
 type CenterWrapperProps = {
   children: ReactNode;

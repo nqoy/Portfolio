@@ -1,4 +1,4 @@
-import styles from "./TypingBox.module.css";
+import styles from "./typingBox.module.css";
 
 type TypingBoxProps = {
   textLines: string[];

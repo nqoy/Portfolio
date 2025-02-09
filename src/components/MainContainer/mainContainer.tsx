@@ -1,4 +1,4 @@
-import styles from "./MainContainer.module.css";
+import styles from "./mainContainer.module.css";
 import { Profile } from "../Elements/Profile/profile";
 import { GitHubData } from "../Elements/GitHubData/gitHubData";
 
