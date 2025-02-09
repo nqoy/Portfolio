@@ -3,5 +3,5 @@
   align-items: center;
   gap: var(--spacing-xxl);
   padding: var(--spacing-xl);
-  min-width: 50%;
+  min-width: 100%;
 }
