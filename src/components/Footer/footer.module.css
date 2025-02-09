@@ -2,7 +2,7 @@
   margin-top: auto;
   text-align: center;
   color: var(--text-color);
-  padding: var(--spacing-s);
+  padding: var(--spacing-xs);
   font-size: var(--font-size-s);
   background-color: var(--primary-color);
 }

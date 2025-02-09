@@ -10,6 +10,10 @@ export const defaultOptions: ChartOptions<ChartType> = {
   plugins: {
     legend: {
       align: "start",
+      position: "right",
+      labels: {
+        color: "white",
+      },
     },
     tooltip: {
       callbacks: {

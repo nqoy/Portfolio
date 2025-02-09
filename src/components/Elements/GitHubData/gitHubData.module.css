@@ -1,5 +1,16 @@
 .gitHubData {
   display: flex;
-  align-items: center;
   gap: var(--spacing-xxl);
+  align-items: flex-start;
+  padding: var(--spacing-l);
+}
+
+.projectsContainer {
+  padding: var(--spacing-xl);
+  min-width: 50%;
+}
+
+.repo {
+  font-size: var(--font-size-m);
+  line-height: 2;
 }

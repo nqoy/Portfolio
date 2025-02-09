@@ -7,8 +7,8 @@ import { CircularImage } from "../CircularImage/circularImage";
 import styles from "./profile.module.css";
 
 const profileText = [
-  "Driven by curiosity and a passion for learning. 💡",
   "3 years of full-stack development experience. 💻",
+  "Driven by curiosity and a passion for learning. 💡",
   "Specialized in back-end development. 🔧",
   "B.Sc. in Computer Science. 🎓",
 ];

@@ -15,6 +15,8 @@ export const GitHubData = () => {
   const [error, setError] = useState<string | null>(null);
 
   const excludedLanguages = ["Jupyter Notebook", "CSS", "HTML"];
+  const excludedRepoSubNames = ["Ex", "demo", "Project"];
+  const nameExludeRegex = new RegExp(excludedRepoSubNames.join("|"), "i");
 
   useEffect(() => {
     if (Object.keys(reposData).length > 0) return;
@@ -45,11 +47,17 @@ export const GitHubData = () => {
 
     reposDataEdges.forEach((repoEdge: any) => {
       const repoNode = repoEdge.node;
+      const isExcluded = nameExludeRegex.test(repoNode.name);
+
+      if (isExcluded) {
+        return;
+      }
       const languagesData = repoNode.languages;
       const languages: RepoLanguages[] = [];
 
       languagesData.edges.forEach((langEdge: any) => {
         const languageName = langEdge.node.name;
+
         if (excludedLanguages.includes(languageName)) {
           return;
         }
@@ -89,24 +97,25 @@ export const GitHubData = () => {
   }
 
   return (
-    <div className={styles.gitHubData} id="projects">
-      <Chart
-        title="Used Languages"
-        chartType="doughnut"
-        labels={Array.from(languagesMap?.keys() || [])}
-        labelValues={Array.from(languagesMap?.values() || [])}
-      />
-      <ul>
-        <h2>My Projects</h2>
-        {Object.keys(reposData).map((repoName) => {
-          const repo = reposData[repoName];
-          return (
-            <li key={repoName}>
-              <strong>{repo.repoName}</strong>
-            </li>
-          )
-        })}
-      </ul>
+    <div className={styles.projectsContainer}  id="projects">
+      <h2>Projects</h2>
+      <div className={styles.gitHubData}>
+        <Chart
+          chartType="doughnut"
+          labels={Array.from(languagesMap?.keys() || [])}
+          labelValues={Array.from(languagesMap?.values() || [])}
+        />
+        <ul>
+          {Object.keys(reposData).map((repoName) => {
+            const repo = reposData[repoName];
+            return (
+              <li className={styles.repo} key={repoName}>
+                <strong>{repo.repoName}</strong>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

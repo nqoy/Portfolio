@@ -67,7 +67,7 @@ export const Chart = ({
 
   return (
     <div className={styles.ChartContainer}>
-      <h3>{title}</h3>
+      {title && <h3>{title}</h3>}
       <ChartComponent data={data} options={options || defaultOptions} />
     </div>
   );
