@@ -6,7 +6,7 @@ type ImageSliderProps = {
   displayTime?: number;
 };
 
-const ImageSlider = ({ totalImages, displayTime = 2500 }: ImageSliderProps) => {
+export const ImageSlider = ({ totalImages, displayTime = 2500 }: ImageSliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isHovered = useRef(false);
@@ -93,5 +93,3 @@ const ImageSlider = ({ totalImages, displayTime = 2500 }: ImageSliderProps) => {
     </div>
   );
 };
-
-export default ImageSlider;

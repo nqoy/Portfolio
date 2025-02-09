@@ -2,7 +2,7 @@ import { GITHUB_GRAPHQL_API_URL, GITHUB_TOKEN } from "../../public/config";
 import { QueryBuilder } from '../graphql/queryBuilder';
 import { GitHubQuery } from '../classes/gitHubQuery';
 
-export const fetchGitHubData = async (gitHubQuery: GitHubQuery) => {
+export const FetchGitHubData = async (gitHubQuery: GitHubQuery) => {
     const query = QueryBuilder.buildQuery(gitHubQuery);
 
     const response = await fetch(GITHUB_GRAPHQL_API_URL, {

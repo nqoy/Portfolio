@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { GitHubQueryField, SortOrder } from "../../../graphql/queryEnums";
 import { GitHubQuery } from "../../../classes/gitHubQuery";
-import { fetchGitHubData } from "../../../services/graphqlApi";
+import { FetchGitHubData } from "../../../services/graphqlApi";
 import { RepoData, RepoLanguages } from "../../../classes/repoData";
 import { Chart } from "../Chart/chart";
-import styles from "./gitHubData.module.css";
 import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox";
-import ImageSlider from "../ImageSlider/imageSlider";
+import { ImageSlider } from "../ImageSlider/imageSlider";
+import styles from "./gitHubData.module.css";
 
 export const GitHubData = () => {
   const [reposData, setReposData] = useState<{ [key: string]: RepoData }>({});
@@ -31,7 +31,7 @@ export const GitHubData = () => {
 
     const fetchData = async () => {
       try {
-        const data = await fetchGitHubData(reposQuery);
+        const data = await FetchGitHubData(reposQuery);
         handleReposFetchData(data.viewer.repositories.edges);
       } catch (error: any) {
         setError(error.message);
