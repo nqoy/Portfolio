@@ -1,7 +1,11 @@
 .typingBox {
-    max-width: min-content;
-    line-height: var(--line-height);
-    min-width: var(--element-size-s);
-    font-size: var(--font-size-m);
-    
-  }
+  max-width: min-content;
+  line-height: var(--line-height);
+  min-width: var(--element-size-xl);
+  font-size: var(--font-size-m);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-s);
+  height: 100%;
+}

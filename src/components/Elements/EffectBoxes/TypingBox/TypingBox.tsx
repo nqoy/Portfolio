@@ -14,7 +14,7 @@ export const TypingBox = ({ textLines, typingDelaySeconds }: TypingBoxProps) => 
           className="typing-effect"
           style={
             {
-              "--delay": `${index * typingDelaySeconds}s`,
+              "--delay": `${(index + 0.2) * typingDelaySeconds}s`,
             } as React.CSSProperties
           }
         >

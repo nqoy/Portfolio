@@ -5,6 +5,8 @@ import { fetchGitHubData } from "../../../services/graphqlApi";
 import { RepoData, RepoLanguages } from "../../../classes/repoData";
 import { Chart } from "../Chart/Chart";
 import styles from "./gitHubData.module.css";
+import ImageCarousel from "../ImageSlider/ImageSlider";
+import { FadeInBox } from "../EffectBoxes/FadeInBox/FadeInBox";
 
 export const GitHubData = () => {
   const [reposData, setReposData] = useState<{ [key: string]: RepoData }>({});
@@ -84,21 +86,17 @@ export const GitHubData = () => {
     setReposData(reposMap);
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
+  if (!loading && error) {
     return <div>Error: {error}</div>;
   }
 
-  if (Object.keys(reposData).length === 0) {
+  if (!loading && Object.keys(reposData).length === 0) {
     return <div>No repositories found.</div>;
   }
 
   return (
-    <div className={styles.projectsContainer}  id="projects">
-      <h2>Projects</h2>
+    <FadeInBox className={styles.projectsContainer}>
+      <h2 id="projects">Projects</h2>
       <div className={styles.gitHubData}>
         <Chart
           chartType="doughnut"
@@ -116,6 +114,7 @@ export const GitHubData = () => {
           })}
         </ul>
       </div>
-    </div>
+      <ImageCarousel totalImages={7} displayTime={5000} />
+    </FadeInBox>
   );
 };

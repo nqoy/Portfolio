@@ -4,4 +4,6 @@
     line-height: var(--line-height);
     font-size: var(--font-size-m);
     font-weight: bold;
+    min-width: var(--element-size-m);
+    min-height: 1vh;
   }
