@@ -104,17 +104,19 @@ export const GitHubData = () => {
           labelValues={Array.from(languagesMap?.values() || [])}
         />
         <ul>
-          {Object.keys(reposData).map((repoName) => {
-            const repo = reposData[repoName];
-            return (
-              <li className={styles.repo} key={repoName}>
-                <strong>{repo.repoName}</strong>
-              </li>
-            );
-          })}
+          <div className={styles.reposContainer}>
+            {Object.keys(reposData).map((repoName) => {
+              const repo = reposData[repoName];
+              return (
+                <li className={styles.repo} key={repoName}>
+                  <strong>{repo.repoName}</strong>
+                </li>
+              );
+            })}
+          </div>
         </ul>
       </div>
-      <ImageCarousel totalImages={7}/>
+      <ImageCarousel totalImages={7} />
     </FadeInBox>
   );
 };

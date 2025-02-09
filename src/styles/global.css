@@ -70,3 +70,23 @@ a:hover {
   padding: 0;
   box-sizing: border-box;
 }
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-light-color);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border-radius: 10px;
+  margin: 5px;
+}

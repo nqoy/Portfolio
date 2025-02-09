@@ -8,5 +8,5 @@
   text-align: center;
   color: var(--text-color);
   overflow-y: auto;
-  flex: 1
+  flex: 1;
 }

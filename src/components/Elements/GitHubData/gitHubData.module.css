@@ -2,14 +2,19 @@
   display: flex;
   gap: var(--spacing-xxl);
   align-items: flex-start;
-  padding: var(--spacing-l) var(--spacing-l) 0 var(--spacing-l);
+  padding: var(--spacing-l) var(--spacing-xl) ;
+  justify-content: center
 }
 
 .projectsContainer {
-  min-width: 50%;
+  width: 100%;
 }
 
 .repo {
   font-size: var(--font-size-m);
   line-height: 2;
+}
+
+.reposContainer{
+  padding: 0 var(--spacing-xl);
 }

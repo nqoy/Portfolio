@@ -3,6 +3,7 @@
   --primary-color: #679fae;
   --secondary-color: #222;
   --background-color: #f5f5f5;
+  --accent-light-color: #fd7a63;
   --accent-color: #ff6347;
   --border-color: #ddd;
   --border-radius: 8px;
@@ -29,7 +30,7 @@
   /* Sizes for Elements and Images */
   --element-size-s: clamp(120px, 10vw, 180px);
   --element-size-m: clamp(180px, 20vw, 300px);
-  --element-size-l: clamp(300px, 30vw, 500px);
+  --element-size-l: clamp(300px, 30vw, 550px);
   --element-size-xl: clamp(320px, 40vw, 600px);
   --element-size-xxl: clamp(500px, 45vw, 700px);
 
