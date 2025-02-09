@@ -5,7 +5,10 @@ type TypingBoxProps = {
   typingDelaySeconds: number;
 };
 
-export const TypingBox = ({ textLines, typingDelaySeconds }: TypingBoxProps) => {
+export const TypingBox = ({
+  textLines,
+  typingDelaySeconds,
+}: TypingBoxProps) => {
   return (
     <div className={styles.typingBox}>
       {textLines.map((line, index) => (

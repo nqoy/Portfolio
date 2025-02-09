@@ -6,7 +6,10 @@ type ImageSliderProps = {
   displayTime?: number;
 };
 
-export const ImageSlider = ({ totalImages, displayTime = 2500 }: ImageSliderProps) => {
+export const ImageSlider = ({
+  totalImages,
+  displayTime = 2500,
+}: ImageSliderProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isHovered = useRef(false);
@@ -64,12 +67,15 @@ export const ImageSlider = ({ totalImages, displayTime = 2500 }: ImageSliderProp
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const { left, top, width, height } =
+      e.currentTarget.getBoundingClientRect();
     const offsetX = e.clientX - left;
     const offsetY = e.clientY - top;
 
     const img = e.currentTarget as HTMLImageElement;
-    img.style.transformOrigin = `${(offsetX / width) * 100}% ${(offsetY / height) * 100}%`;
+    img.style.transformOrigin = `${(offsetX / width) * 100}% ${
+      (offsetY / height) * 100
+    }%`;
   };
 
   return (

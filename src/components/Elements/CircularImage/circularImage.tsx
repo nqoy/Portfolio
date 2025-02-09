@@ -6,11 +6,5 @@ type CircularImageProps = {
 };
 
 export const CircularImage = ({ src, alt }: CircularImageProps) => {
-  return (
-    <img
-      src={src}
-      alt={alt}
-      className={styles.circularImage}
-    />
-  );
+  return <img src={src} alt={alt} className={styles.circularImage} />;
 };

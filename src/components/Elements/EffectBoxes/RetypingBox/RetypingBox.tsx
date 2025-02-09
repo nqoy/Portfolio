@@ -30,9 +30,7 @@ export const RetypingBox = ({ repeatLines }: RetypingBoxProps) => {
   return (
     <div
       className={styles.retypingBox}
-      style={
-        { "--switch-time": `${lineSwitchTime}ms` } as React.CSSProperties
-      }
+      style={{ "--switch-time": `${lineSwitchTime}ms` } as React.CSSProperties}
     >
       <span className="type-delete-effect">
         {repeatLines[currentLineIndex]}

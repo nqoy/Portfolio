@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { CenterWrapper } from "../CenterWrapper/centerWrapper";
 import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox";
 import { TypingBox } from "../EffectBoxes/TypingBox/typingBox";
