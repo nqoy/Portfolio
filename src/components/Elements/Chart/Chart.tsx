@@ -1,7 +1,7 @@
 import React from "react";
 import { Pie, Bar, Line, Doughnut } from "react-chartjs-2";
-import { chartStyles } from "./chartStyles";
-import { defaultOptions, ChartType } from "./chartOptions";
+import { chartStyles } from "./chartStyles.ts";
+import { defaultOptions, ChartType } from "./chartOptions.ts";
 import styles from "./chart.module.css";
 
 import {

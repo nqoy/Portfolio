@@ -1,4 +1,4 @@
-import { GitHubQueryField, SortOrder } from "../graphql/queryEnums";
+import { GitHubQueryField, SortOrder } from "../graphql/queryEnums.ts";
 
 export class GitHubQuery {
   private fields: GitHubQueryField[];

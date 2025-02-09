@@ -1,5 +1,5 @@
-import { GitHubQuery } from "../classes/gitHubQuery";
-import { GitHubQueryField } from "./queryEnums";
+import { GitHubQuery } from "../classes/gitHubQuery.ts";
+import { GitHubQueryField } from "./queryEnums.ts";
 
 const fieldMappings = {
   [GitHubQueryField.URL]: "url",

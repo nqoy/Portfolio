@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { GitHubQueryField, SortOrder } from "../../../graphql/queryEnums";
-import { GitHubQuery } from "../../../classes/gitHubQuery";
-import { FetchGitHubData } from "../../../services/graphqlApi";
-import { RepoData, RepoLanguages } from "../../../classes/repoData";
-import { Chart } from "../Chart/chart";
-import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox";
-import { ImageSlider } from "../ImageSlider/imageSlider";
+import { GitHubQueryField, SortOrder } from "../../../graphql/queryEnums.ts";
+import { GitHubQuery } from "../../../classes/gitHubQuery.ts";
+import { FetchGitHubData } from "../../../services/graphqlApi.ts";
+import { RepoData, RepoLanguages } from "../../../classes/repoData.ts";
+import { Chart } from "../Chart/chart.tsx";
+import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox.tsx";
+import { ImageSlider } from "../ImageSlider/imageSlider.tsx";
 import styles from "./gitHubData.module.css";
 
 export const GitHubData = () => {

@@ -1,6 +1,6 @@
-import { GITHUB_GRAPHQL_API_URL, GITHUB_TOKEN } from "../../public/config";
-import { QueryBuilder } from "../graphql/queryBuilder";
-import { GitHubQuery } from "../classes/gitHubQuery";
+import { GITHUB_GRAPHQL_API_URL, GITHUB_TOKEN } from "../../public/config.ts";
+import { QueryBuilder } from "../graphql/queryBuilder.ts";
+import { GitHubQuery } from "../classes/gitHubQuery.ts";
 
 export const FetchGitHubData = async (gitHubQuery: GitHubQuery) => {
   const query = QueryBuilder.buildQuery(gitHubQuery);

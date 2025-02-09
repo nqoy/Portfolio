@@ -1,6 +1,6 @@
-import { MainContainer } from "./components/MainContainer/mainContainer";
-import { Header } from "./components/Header/header";
-import { Footer } from "./components/Footer/footer";
+import { MainContainer } from "./components/MainContainer/mainContainer.tsx";
+import { Header } from "./components/Header/header.tsx";
+import { Footer } from "./components/Footer/footer.tsx";
 import "./styles/global.css";
 
 function App() {

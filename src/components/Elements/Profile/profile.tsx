@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { CenterWrapper } from "../CenterWrapper/centerWrapper";
-import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox";
-import { TypingBox } from "../EffectBoxes/TypingBox/typingBox";
-import { RetypingBox } from "../EffectBoxes/RetypingBox/retypingBox";
-import { CircularImage } from "../CircularImage/circularImage";
+import { CenterWrapper } from "../CenterWrapper/centerWrapper.tsx"
+import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox.tsx";
+import { TypingBox } from "../EffectBoxes/TypingBox/typingBox.tsx";
+import { RetypingBox } from "../EffectBoxes/RetypingBox/retypingBox.tsx";
+import { CircularImage } from "../CircularImage/circularImage.tsx";
 import styles from "./profile.module.css";
 
 const profileText = [

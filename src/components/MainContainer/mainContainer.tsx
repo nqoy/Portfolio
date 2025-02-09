@@ -1,5 +1,5 @@
-import { Profile } from "../Elements/Profile/profile";
-import { GitHubData } from "../Elements/GitHubData/gitHubData";
+import { Profile } from "../Elements/Profile/profile.tsx";
+import { GitHubData } from "../Elements/GitHubData/gitHubData.tsx";
 import styles from "./mainContainer.module.css";
 
 type MainContainerProps = {
