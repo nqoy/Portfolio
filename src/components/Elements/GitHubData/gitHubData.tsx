@@ -114,7 +114,7 @@ export const GitHubData = () => {
           })}
         </ul>
       </div>
-      <ImageCarousel totalImages={7} displayTime={5000} />
+      <ImageCarousel totalImages={7}/>
     </FadeInBox>
   );
 };
