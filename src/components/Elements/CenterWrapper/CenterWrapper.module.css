@@ -5,5 +5,6 @@
     align-items: center;
     text-align: center;
     gap: var(--spacing-m);
+    margin-top: inherit;
   }
   
