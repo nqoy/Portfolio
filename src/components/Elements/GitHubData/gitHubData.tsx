@@ -27,7 +27,7 @@ export const GitHubData = () => {
     if (Object.keys(reposData).length > 0) return;
 
     const reposQuery = new GitHubQuery(
-      [GitHubQueryField.NAME, GitHubQueryField.LANGUAGES],
+      [GitHubQueryField.NAME, GitHubQueryField.URL, GitHubQueryField.LANGUAGES],
       SortOrder.ASC,
       GitHubQueryField.CREATED_AT
     );
@@ -76,7 +76,11 @@ export const GitHubData = () => {
       });
 
       if (languages.length > 0) {
-        reposMap[repoNode.name] = new RepoData(repoNode.name, languages);
+        reposMap[repoNode.name] = new RepoData(
+          repoNode.name,
+          repoNode.url,
+          languages
+        );
       }
     });
     const sortedLanguages = new Map(
@@ -113,7 +117,15 @@ export const GitHubData = () => {
                 const repo = reposData[repoName];
                 return (
                   <li className={styles.repo} key={repoName}>
-                    <strong>{repo.repoName}</strong>
+                    <strong>
+                      <a
+                        href={repo.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {repo.repoName}
+                      </a>
+                    </strong>
                   </li>
                 );
               })}

@@ -1,10 +1,13 @@
 export class RepoData {
   public repoName: string;
+  public url: string;
   public languages: RepoLanguages[] = [];
 
-  constructor(repoName: string, languages: RepoLanguages[]) {
+
+  constructor(repoName: string, url: string, languages: RepoLanguages[]) {
     this.repoName = repoName;
     this.languages = languages;
+    this.url = url;
   }
 }
 
