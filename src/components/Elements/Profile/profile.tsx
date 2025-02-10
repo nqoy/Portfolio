@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { CenterWrapper } from "../CenterWrapper/centerWrapper.tsx"
+import { CenterWrapper } from "../CenterWrapper/centerWrapper.tsx";
 import { FadeInBox } from "../EffectBoxes/FadeInBox/fadeInBox.tsx";
 import { TypingBox } from "../EffectBoxes/TypingBox/typingBox.tsx";
 import { RetypingBox } from "../EffectBoxes/RetypingBox/retypingBox.tsx";
@@ -39,21 +39,23 @@ export const Profile = () => {
   }, [profileText.length]);
 
   return (
-    <div className={styles.profile} id="about">
-      <CenterWrapper>
-        <FadeInBox>
-          <TypingBox
-            textLines={profileText}
-            typingDelaySeconds={typingDelaySeconds}
-          />
-        </FadeInBox>
-        {showRetypingBox && (
+    <section id="about">
+      <div className={styles.profile}>
+        <CenterWrapper>
           <FadeInBox>
-            <RetypingBox repeatLines={repeatLines} />
+            <TypingBox
+              textLines={profileText}
+              typingDelaySeconds={typingDelaySeconds}
+            />
           </FadeInBox>
-        )}
-      </CenterWrapper>
-      <CircularImage src={profileImageURL} alt="Failed loading image" />
-    </div>
+          {showRetypingBox && (
+            <FadeInBox>
+              <RetypingBox repeatLines={repeatLines} />
+            </FadeInBox>
+          )}
+        </CenterWrapper>
+        <CircularImage src={profileImageURL} alt="Failed loading image" />
+      </div>
+    </section>
   );
 };

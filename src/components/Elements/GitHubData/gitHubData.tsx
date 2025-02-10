@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
-import { GitHubQueryField, SortOrder } from "../../../graphql/queryEnums.ts";
+import {
+  GitHubQueryField,
+  SortOrder,
+} from "../../../classes/graphql/queryEnums.ts";
 import { GitHubQuery } from "../../../classes/gitHubQuery.ts";
 import { FetchGitHubData } from "../../../services/graphqlApi.ts";
 import { RepoData, RepoLanguages } from "../../../classes/repoData.ts";
@@ -95,28 +98,30 @@ export const GitHubData = () => {
   }
 
   return (
-    <FadeInBox className={styles.projectsContainer}>
-      <h1 id="projects">Projects</h1>
-      <div className={styles.gitHubData}>
-        <Chart
-          chartType="doughnut"
-          labels={Array.from(languagesMap?.keys() || [])}
-          labelValues={Array.from(languagesMap?.values() || [])}
-        />
-        <ul>
-          <div className={styles.reposContainer}>
-            {Object.keys(reposData).map((repoName) => {
-              const repo = reposData[repoName];
-              return (
-                <li className={styles.repo} key={repoName}>
-                  <strong>{repo.repoName}</strong>
-                </li>
-              );
-            })}
-          </div>
-        </ul>
-      </div>
-      <ImageSlider totalImages={7} />
-    </FadeInBox>
+    <section id="projects">
+      <FadeInBox className={styles.projectsContainer}>
+        <h1>Projects</h1>
+        <div className={styles.gitHubData}>
+          <Chart
+            chartType="doughnut"
+            labels={Array.from(languagesMap?.keys() || [])}
+            labelValues={Array.from(languagesMap?.values() || [])}
+          />
+          <ul>
+            <div className={styles.reposContainer}>
+              {Object.keys(reposData).map((repoName) => {
+                const repo = reposData[repoName];
+                return (
+                  <li className={styles.repo} key={repoName}>
+                    <strong>{repo.repoName}</strong>
+                  </li>
+                );
+              })}
+            </div>
+          </ul>
+        </div>
+        <ImageSlider totalImages={7} />
+      </FadeInBox>
+    </section>
   );
 };

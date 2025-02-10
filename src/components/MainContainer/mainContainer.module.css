@@ -9,4 +9,5 @@
   color: var(--text-color);
   overflow-y: auto;
   flex: 1;
+  gap: var(--spacing-xl);
 }

@@ -1,0 +1,27 @@
+.contact {
+    text-align: center;
+    padding: var(--spacing-l);
+  }
+  
+  .contact ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-m);
+  }
+  
+  .contact li {
+    display: flex;
+  }
+  
+  .contact a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .contact a:hover {
+    color: var(--accent-color);
+  }
+  

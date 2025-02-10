@@ -1,4 +1,4 @@
-import { GitHubQuery } from "../classes/gitHubQuery.ts";
+import { GitHubQuery } from "../gitHubQuery.ts";
 import { GitHubQueryField } from "./queryEnums.ts";
 
 const fieldMappings = {
