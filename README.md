@@ -1,25 +1,36 @@
 # Personal Portfolio Website
 
-## Tech Stack
+This is a personal portfolio website with an OOP orientation.<br/>
+Dynamically fetches GitHub project data using **GraphQL** to showcase public projects.
 
-### Frontend:
-- **React** with **TypeScript**
-- **Vite** for fast development and bundling
+## Summary:
+A clean and responsive personal portfolio website designed to showcase projects, experience, and any other relevant content in an easy-to-read, visually appealing layout.<br/>
+Static content (About Me, Skills, etc.) is combined with dynamic project data fetched from GitHub via GraphQL.
 
-### Backend / Dynamic Data:
-- **GraphQL** for fetching dynamic data (e.g., GitHub repositories)
+## My Live Portfolio:
+Check out the live version of the portfolio website here: [Noy Benbenishty's Portfolio](https://noybenbenishty.netlify.app/)
 
-### Deployment:
-- Hosted on **Netlify**
+## Build & Run:
+1. Clone the project repository from Git: `git clone <git-repository-url>` or using GitHub CLI.
+2. Set up a React project with TypeScript (e.g., `npx create-react-app my-app --template typescript`).
+3. Create github token for usage & use in env file
+4. Install dependencies:  `npm install`.
+5. Integrate **GraphQL** to fetch GitHub data and costomize needed queries with the query builder class.
+6. Design and build reusable React components to display projects.
+7. Deploy to a static hosting platform (e.g., **Netlify**).
 
-## Features
+## Frontend:
+Built with **React** and **TypeScript** using **Vite** for fast development and bundling.
 
-- **Static Content**: Sections like About Me, Skills, etc., are static.
-- **Dynamic Data**: Fetches project data (titles, descriptions, links) from external APIs using **GraphQL**.
-- **Clean and Responsive Design**: The layout adapts to different screen sizes and devices.
-- **Performance Optimization**: The website is optimized for fast performance with features like lazy loading and static site generation (SSG).
+## Dynamic Data:
+Uses **GraphQL** to dynamically fetch project data (e.g., GitHub repositories). The query builder is used to structure and send GraphQL queries to the GitHub API to retrieve project data like titles, descriptions, and links.
 
-## GraphQL Query example
+## Tech Stack:
+- **Frontend**: React, TypeScript, Vite
+- **GraphQL**: Query builder for fetching GitHub data
+- **Deployment**: Netlify (for static site hosting)
+
+## GraphQL Query Example:
 ```graphql
 query {
   viewer {
