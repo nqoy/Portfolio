@@ -22,7 +22,7 @@ const repeatLines = [
   "Infrastructure ☁️",
   "Troubleshooting 🐛",
 ];
-const typingDelaySeconds = 3;
+const typingDelaySeconds = 5.6;
 const profileImageURL = "https://avatars.githubusercontent.com/u/93088356?v=4";
 
 export const Profile = () => {

@@ -5,6 +5,7 @@
   padding: var(--spacing-xs);
   font-size: var(--font-size-s);
   background-color: var(--primary-color);
+  margin-top: auto;
 }
 
 .footer p {

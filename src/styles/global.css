@@ -6,6 +6,7 @@ body {
   font-family: var(--text-font);
   color: var(--text-color);
   background-color: var(--background-color);
+  overflow: hidden;
 }
 
 h1 {
@@ -33,7 +34,6 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  scroll-behavior: smooth;
 }
 
 .app-container {
@@ -41,12 +41,12 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
 }
 
 .app-container > main {
   flex: 1;
-  justify-content: space-evenly;
+  overflow-y: auto;
+  padding-bottom: var(--spacing-xs);
 }
 
 p {
@@ -76,12 +76,6 @@ a:hover {
   overflow-wrap: break-word;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 @media (max-width: 400px) {
   ::-webkit-scrollbar {
     width: 5px;
@@ -94,15 +88,9 @@ a:hover {
   }
 }
 
-@media (min-width: 601px) and (max-width: 700px) {
+@media (min-width: 601px) {
   ::-webkit-scrollbar {
     width: 15px;
-  }
-}
-
-@media (min-width: 701px) {
-  ::-webkit-scrollbar {
-    width: 20px;
   }
 }
 
@@ -120,4 +108,3 @@ a:hover {
   border-radius: 10px;
   margin: 5px;
 }
-

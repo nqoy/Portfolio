@@ -17,7 +17,7 @@
   --font-size-xxl: clamp(1.8rem, 4.5vw, 4rem);
   --font-size-xl: clamp(1.6rem, 4vw, 3.5rem); 
   --font-size-l: clamp(1rem, 4vw, 4rem);
-  --font-size-m: clamp(0.7rem, 2vw, 1.5rem);
+  --font-size-m: clamp(0.7rem, 2vw, 1.7rem);
   --font-size-s: clamp(0.3rem, 1.5vw, 1rem);
   --font-size-xs: clamp(0.2rem, 1vw, 0.7rem);
   --font-weight-normal: 400;
@@ -33,7 +33,7 @@
   /* Sizes for Elements and Images */
   --element-size-s: clamp(120px, 10vw, 180px);
   --element-size-m: clamp(180px, 20vw, 300px);
-  --element-size-l: clamp(300px, 30vw, 550px);
+  --element-size-l: clamp(300px, 28vw, 550px);
   --element-size-xl: clamp(320px, 40vw, 600px);
   --element-size-xxl: clamp(500px, 45vw, 700px);
 

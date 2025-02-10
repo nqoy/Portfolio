@@ -19,10 +19,10 @@
   display: inline-block;
   max-width: fit-content;
   border-right: 2px solid transparent;
-  --typing-duration: 2s;
+  --typing-duration: 5s;
   --cursor-delay: -0.6s;
-  animation: typing var(--typing-duration) steps(80, end) var(--delay) forwards,
-    blink-cursor var(--typing-duration) steps(80, end) calc(var(--delay) - 0.6s)
+  animation: typing var(--typing-duration) steps(100, end) var(--delay) forwards,
+    blink-cursor var(--typing-duration) steps(100, end) calc(var(--delay) - 0.8s)
       forwards;
 }
 

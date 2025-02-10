@@ -2,9 +2,9 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import styles from "./contact.module.css";
 
 const contactLinks = [
-  { icon: <FaEnvelope size={24} />, href: "mailto:nqoy132@gmail.com" },
-  { icon: <FaLinkedin size={24} />, href: "https://www.linkedin.com/in/nqoy/" },
-  { icon: <FaGithub size={24} />, href: "https://github.com/nqoy" },
+  { icon: <FaEnvelope size={35} />, href: "mailto:nqoy132@gmail.com" },
+  { icon: <FaLinkedin size={35} />, href: "https://www.linkedin.com/in/nqoy/" },
+  { icon: <FaGithub size={35} />, href: "https://github.com/nqoy" },
 ];
 
 const Contact = () => {
