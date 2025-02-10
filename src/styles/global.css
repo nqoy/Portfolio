@@ -82,8 +82,28 @@ a:hover {
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
+@media (max-width: 400px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 700px) {
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+}
+
+@media (min-width: 701px) {
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
 }
 
 ::-webkit-scrollbar-thumb {
@@ -100,3 +120,4 @@ a:hover {
   border-radius: 10px;
   margin: 5px;
 }
+
