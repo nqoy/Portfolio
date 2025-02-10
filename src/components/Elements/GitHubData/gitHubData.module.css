@@ -2,7 +2,7 @@
   display: flex;
   gap: var(--spacing-xxl);
   align-items: flex-start;
-  padding: var(--spacing-l) var(--spacing-xl) ;
+  padding: var(--spacing-l) var(--spacing-xl);
   justify-content: center
 }
 
@@ -23,5 +23,7 @@
   .gitHubData {
     flex-direction: column;
     align-items: center;
+    gap: var(--spacing-s);
+    padding: var(--spacing-l) 0;
   }
 }

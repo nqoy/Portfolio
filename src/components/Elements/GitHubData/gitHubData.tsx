@@ -96,7 +96,7 @@ export const GitHubData = () => {
 
   return (
     <FadeInBox className={styles.projectsContainer}>
-      <h2 id="projects">Projects</h2>
+      <h1 id="projects">Projects</h1>
       <div className={styles.gitHubData}>
         <Chart
           chartType="doughnut"

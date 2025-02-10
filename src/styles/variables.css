@@ -13,6 +13,9 @@
   --text-font: Arial, sans-serif;
   --line-height: 1.5;
   --font-size-title: clamp(1.5rem, 5vw, 3rem);
+  --font-size-xxxl: clamp(3rem, 5vw, 5rem);
+  --font-size-xxl: clamp(1.8rem, 4.5vw, 4rem);
+  --font-size-xl: clamp(1.6rem, 4vw, 3.5rem); 
   --font-size-l: clamp(1rem, 4vw, 4rem);
   --font-size-m: clamp(0.7rem, 2vw, 1.5rem);
   --font-size-s: clamp(0.3rem, 1.5vw, 1rem);
@@ -25,7 +28,7 @@
   --spacing-m: clamp(0.5rem, 1vw, 1.5rem);
   --spacing-l: clamp(2rem, 2vw, 4rem);
   --spacing-xl: clamp(2rem, 5vw, 6rem);
-  --spacing-xxl: clamp(3rem, 10vw, 10rem);
+  --spacing-xxl: clamp(2rem, 8vw, 10rem);
 
   /* Sizes for Elements and Images */
   --element-size-s: clamp(120px, 10vw, 180px);
