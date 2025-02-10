@@ -5,6 +5,9 @@
   padding: var(--spacing-s) var(--spacing-m);
   justify-content: space-between;
   background-color: var(--primary-color);
+  position: fixed;
+  z-index: var(--z-index-dropdown);
+  width: -webkit-fill-available
 }
 
 .title {
