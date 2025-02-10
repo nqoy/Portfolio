@@ -6,7 +6,7 @@ import "./styles/global.css";
 function App() {
   return (
     <div className="app-container">
-      <Header title="My Portfolio" />
+      <Header title="Noy Benbenishty" />
       <MainContainer />
       <Footer />
     </div>
