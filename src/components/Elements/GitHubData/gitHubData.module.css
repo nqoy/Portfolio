@@ -18,3 +18,10 @@
 .reposContainer{
   padding: 0 var(--spacing-xl);
 }
+
+@media (max-width: 767px) {
+  .gitHubData {
+    flex-direction: column;
+    align-items: center;
+  }
+}

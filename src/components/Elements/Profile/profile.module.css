@@ -3,5 +3,11 @@
   align-items: center;
   gap: var(--spacing-xxl);
   padding: var(--spacing-l);
-  min-width: 100%;
+  min-width: 80%;
+}
+
+@media (max-width: 767px) {
+  .profile {
+    flex-direction: column;
+  }
 }
