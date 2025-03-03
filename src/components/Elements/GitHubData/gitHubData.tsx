@@ -27,7 +27,7 @@ export const GitHubData = () => {
     if (Object.keys(reposData).length > 0) return;
 
     const reposQuery = new GitHubQuery(
-      [GitHubQueryField.NAME, GitHubQueryField.URL, GitHubQueryField.LANGUAGES],
+      [GitHubQueryField.NAME, GitHubQueryField.URL, GitHubQueryField.LANGUAGES, GitHubQueryField.IS_PRIVATE],
       SortOrder.ASC,
       GitHubQueryField.CREATED_AT
     );
@@ -52,12 +52,12 @@ export const GitHubData = () => {
 
     reposDataEdges.forEach((repoEdge: any) => {
       const repoNode = repoEdge.node;
-      const isExcluded = nameExludeRegex.test(repoNode.name);
+      const languagesData = repoNode.languages;
+      const isExcluded = repoNode.isPrivate || nameExludeRegex.test(repoNode.name) || languagesData.edges.length == 0;
 
       if (isExcluded) {
         return;
       }
-      const languagesData = repoNode.languages;
       const languages: RepoLanguages[] = [];
 
       languagesData.edges.forEach((langEdge: any) => {
