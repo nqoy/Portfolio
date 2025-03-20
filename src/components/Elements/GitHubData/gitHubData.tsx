@@ -21,13 +21,18 @@ export const GitHubData = () => {
 
   const excludedLanguages = ["Jupyter Notebook", "CSS", "HTML"];
   const excludedRepoSubNames = ["Ex", "demo", "Project"];
-  const nameExludeRegex = new RegExp(excludedRepoSubNames.join("|"), "i");
+  const nameExcludeRegex = new RegExp(excludedRepoSubNames.join("|"), "i");
 
   useEffect(() => {
     if (Object.keys(reposData).length > 0) return;
 
     const reposQuery = new GitHubQuery(
-      [GitHubQueryField.NAME, GitHubQueryField.URL, GitHubQueryField.LANGUAGES, GitHubQueryField.IS_PRIVATE],
+      [
+        GitHubQueryField.NAME,
+        GitHubQueryField.URL,
+        GitHubQueryField.LANGUAGES,
+        GitHubQueryField.IS_PRIVATE,
+      ],
       SortOrder.ASC,
       GitHubQueryField.CREATED_AT
     );
@@ -53,7 +58,10 @@ export const GitHubData = () => {
     reposDataEdges.forEach((repoEdge: any) => {
       const repoNode = repoEdge.node;
       const languagesData = repoNode.languages;
-      const isExcluded = repoNode.isPrivate || nameExludeRegex.test(repoNode.name) || languagesData.edges.length == 0;
+      const isExcluded =
+        repoNode.isPrivate ||
+        nameExcludeRegex.test(repoNode.name) ||
+        languagesData.edges.length == 0;
 
       if (isExcluded) {
         return;
@@ -132,7 +140,7 @@ export const GitHubData = () => {
             </div>
           </ul>
         </div>
-        <ImageSlider totalImages={7} />
+        <ImageSlider totalImages={10} />
       </FadeInBox>
     </section>
   );

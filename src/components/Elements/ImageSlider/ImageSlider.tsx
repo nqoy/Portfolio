@@ -14,10 +14,6 @@ export const ImageSlider = ({
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isHovered = useRef(false);
 
-  const changeImage = (index: number) => {
-    setCurrentIndex(() => (index + totalImages) % totalImages);
-  };
-
   const startAutoSlide = () => {
     timeoutRef.current = setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages);
@@ -40,6 +36,10 @@ export const ImageSlider = ({
     };
   }, [currentIndex, displayTime, totalImages]);
 
+  const changeImage = (index: number) => {
+    setCurrentIndex(() => (index + totalImages) % totalImages);
+  };
+
   const goToPrevious = () => {
     clearSlideTimeout();
     changeImage(currentIndex - 1);
@@ -52,7 +52,7 @@ export const ImageSlider = ({
     startAutoSlide();
   };
 
-  const getImageName = (index: number) => {
+  const getImagePath = (index: number) => {
     return `/assets/images/image${index + 1}.png`;
   };
 
@@ -85,7 +85,7 @@ export const ImageSlider = ({
       </button>
       <div className={styles.sliderWrapper}>
         <img
-          src={getImageName(currentIndex)}
+          src={getImagePath(currentIndex)}
           alt={`Image ${currentIndex + 1}`}
           className={styles.sliderImage}
           onMouseMove={handleMouseMove}
