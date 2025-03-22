@@ -10,9 +10,15 @@ type MainContainerProps = {
 export const MainContainer = ({ children }: MainContainerProps) => {
   return (
     <main className={styles.mainContainer}>
-      <Profile />
-      <GitHubData />
-      <Contact/>
+      <section id="about">
+        <Profile />
+      </section>
+      <section id="projects">
+        <GitHubData />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       {children}
     </main>
   );

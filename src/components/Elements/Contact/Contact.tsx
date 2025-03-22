@@ -9,7 +9,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <section className={styles.contact} id = "contact">
+    <div className={styles.contact}>
       <h2>Get in Touch</h2>
       <p>Feel free to reach out!</p>
       <ul>
@@ -21,7 +21,7 @@ const Contact = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 };
 

@@ -39,23 +39,21 @@ export const Profile = () => {
   }, [profileText.length]);
 
   return (
-    <section id="about">
-      <FadeInBox>
-        <div className={styles.profile}>
-          <CenterWrapper>
-            <TypingBox
-              textLines={profileText}
-              typingDelaySeconds={typingDelaySeconds}
-            />
-            {showRetypingBox && (
-              <FadeInBox>
-                <RetypingBox repeatLines={repeatLines} />
-              </FadeInBox>
-            )}
-          </CenterWrapper>
-          <CircularImage src={profileImageURL} alt="Failed loading image" />
-        </div>
-      </FadeInBox>
-    </section>
+    <FadeInBox>
+      <div className={styles.profile}>
+        <CenterWrapper>
+          <TypingBox
+            textLines={profileText}
+            typingDelaySeconds={typingDelaySeconds}
+          />
+          {showRetypingBox && (
+            <FadeInBox>
+              <RetypingBox repeatLines={repeatLines} />
+            </FadeInBox>
+          )}
+        </CenterWrapper>
+        <CircularImage src={profileImageURL} alt="Failed loading image" />
+      </div>
+    </FadeInBox>
   );
 };

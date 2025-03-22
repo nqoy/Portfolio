@@ -110,38 +110,36 @@ export const GitHubData = () => {
   }
 
   return (
-    <section id="projects">
-      <FadeInBox className={styles.projectsContainer}>
-        <h1>Projects</h1>
-        <div className={styles.gitHubData}>
-          <Chart
-            chartType="doughnut"
-            labels={Array.from(languagesMap?.keys() || [])}
-            labelValues={Array.from(languagesMap?.values() || [])}
-          />
-          <ul>
-            <div className={styles.reposContainer}>
-              {Object.keys(reposData).map((repoName) => {
-                const repo = reposData[repoName];
-                return (
-                  <li className={styles.repo} key={repoName}>
-                    <strong>
-                      <a
-                        href={repo.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {repo.repoName}
-                      </a>
-                    </strong>
-                  </li>
-                );
-              })}
-            </div>
-          </ul>
-        </div>
-        <ImageSlider totalImages={10} />
-      </FadeInBox>
-    </section>
+    <FadeInBox className={styles.projectsContainer}>
+      <h1>Projects</h1>
+      <div className={styles.gitHubData}>
+        <Chart
+          chartType="doughnut"
+          labels={Array.from(languagesMap?.keys() || [])}
+          labelValues={Array.from(languagesMap?.values() || [])}
+        />
+        <ul>
+          <div className={styles.reposContainer}>
+            {Object.keys(reposData).map((repoName) => {
+              const repo = reposData[repoName];
+              return (
+                <li className={styles.repo} key={repoName}>
+                  <strong>
+                    <a
+                      href={repo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {repo.repoName}
+                    </a>
+                  </strong>
+                </li>
+              );
+            })}
+          </div>
+        </ul>
+      </div>
+      <ImageSlider totalImages={10} />
+    </FadeInBox>
   );
 };
